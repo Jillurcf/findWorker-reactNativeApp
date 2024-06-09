@@ -1,0 +1,30 @@
+[
+    {
+        "Id": 1,
+        "image": "../assets/images/carWash.jpg",
+        "title": "John Doe",
+        "rating": 4.5,
+        "location": "Abu Dhabi"
+    },
+    {
+        "Id": 2,
+        "image": "../assets/images/carWash1.jpg",
+        "title": "Julian",
+        "rating": 4.5,
+        "location": "Abu Dhabi"
+    },
+    {
+        "Id": 3,
+        "image": "../assets/images/carWash.jpg",
+        "title": "John Doe",
+        "rating": 4.5,
+        "location": "Abu Dhabi"
+    },
+    {
+        "Id": 4,
+        "image": "../assets/images/carWash1.jpg",
+        "title": "Julian ",
+        "rating": 4.5,
+        "location": "Abu Dhabi"
+    },
+]
