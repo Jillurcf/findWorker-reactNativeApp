@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "189953909023",
+    "project_id": "findworker1-react-native",
+    "storage_bucket": "findworker1-react-native.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189953909023:android:5f4ed6df9bdd72b789902a",
+        "android_client_info": {
+          "package_name": "com.findworker1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOWLVITW96fsKXbr2G28h3jOQHOpf5B-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

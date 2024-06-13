@@ -5,6 +5,8 @@ import SignInScreen from './src/page/User/SignInScreen';
 import SignMoreInfoMain from './src/page/User/SignMoreInfoMain';
 import SignUp from './src/page/User/SignUp';
 import VeryfyEmail from './src/page/User/VeryfyEmail';
+import TestFirebase from './src/page/TestFirebase';
+
 
 
 
@@ -20,10 +22,9 @@ const App = () => {
 //  <SignInMoreInfo /> 
 //  <SignMoreInfoMain /> 
 //  <SignUp /> 
- <VeryfyEmail /> 
-
-
-
+<VeryfyEmail /> 
+//<TestFirebase /> 
+//<FetchData />
   )
 }
 

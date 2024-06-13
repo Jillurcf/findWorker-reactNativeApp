@@ -11,10 +11,15 @@ import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import VerfyEmailImg from '../../assets/images/VeryfyEmailImg.svg';
 import OTPTextInput from 'react-native-otp-textinput'
+import useUsers from '../../hooks/useUsers';
+
 
 const {width, height} = Dimensions.get('window');
 const VeryfyEmail = () => {
-  
+  // get data for test purpose
+const {data} = useUsers();
+console.log("21",data)
+
   return (
     <LinearGradient
       style={styles.linearGradient}
@@ -33,22 +38,40 @@ const VeryfyEmail = () => {
           enter the verification code.
         </Text>
       </View>
+      {/* Otp setion start */}
       <View style={styles.OtpContainer}>
-        <OTPTextInput textInputStyle={{backgroundColor: "", borderBottomWidth: 1, borderColor: "red", borderWidth: 1, height: 80, borderRadius: 10, backgroundColor: "white"}} inputCount={6} tintColor="white" offTintColor="white" />
+        <View style={{}}>
+        <OTPTextInput textInputStyle={{backgroundColor: "", borderBottomWidth: 1, height: 70, width: 40, borderRadius: 10, backgroundColor: "white"}} inputCount={6} tintColor="white" offTintColor="white" />
+        </View>
+      <View>
+
+      </View>
       </View>
       <View style={{paddingLeft: width * 0.02, paddingVertical: height * 0.05, textAlign: "center"}}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+<View style={{alignItems: "center"}}>
+<View style={{flexDirection: 'row', justifyContent: 'space-between', width: width * 0.8, }}>
         <Text>Did not get the code?</Text>
         <TouchableOpacity>
           <Text style={{color: "#0668E3", fontWeight: "bold"}}>Resend</Text>
         </TouchableOpacity>
       </View>
+</View>
       </View>
       <View style={{paddingVertical: height * 0.06}}>
         <TouchableOpacity style={{backgroundColor:"#0668E3", paddingVertical: height * 0.02, borderRadius: width * 0.02 }}>
           <Text style={{color: "white", textAlign: "center", fontWeight: "bold", fontSize: 20}}>Veryfy</Text>
         </TouchableOpacity>
       </View>
+      {
+        data?.map((d, index)=> 
+          <View key={index}>
+            <Text>
+              {d?.email}
+            </Text>
+          </View>
+        )
+      }
+   
     </LinearGradient>
   );
 };
@@ -69,4 +92,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: width * 0.05,
   },
+  OtpContainer: {
+alignItems: "center",
+paddingHorizontal: width * 0.1
+  }
 });
