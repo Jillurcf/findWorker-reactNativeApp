@@ -24,9 +24,9 @@ screenName: "AirCondition"
         },
         {
             id: 4,
-            icon: require('../../assets/images/HomeClean.png'),
-            title: "Home Clean",
-            screenName: "CleanHome"
+            icon: require("../../assets/images/HouseKeeper.png"),
+            title: "House Keeper",
+            screenName: "HouseKeeper"
             
         },
         {

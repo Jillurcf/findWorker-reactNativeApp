@@ -2,18 +2,24 @@ import { Button, Dimensions, StyleSheet, Text, TextInput, View, Image } from 're
 import React from 'react';
 
 import { Bell, Search} from "react-native-feather";
+import { useNavigation } from '@react-navigation/native';
 
 
 
 const { width, height } = Dimensions.get('window')
 
 const IconComponent = () => {
+  const navigation = useNavigation(); 
+  
+  const handleSearch = () => { 
+    navigation.navigate('searchScreen')
+  }
   return (
     <View>
      <Text style={styles.iconContainer}>
   
     
-     <Search stroke="#333333" fill="#ffff" width={32} height={32}></Search>
+     <Search onPress={() => handleSearch()} stroke="#333333" fill="#ffff" width={32} height={32}></Search>
      <Bell stroke="#333333" fill="#ffff" width={32} height={32} />
 
      </Text>

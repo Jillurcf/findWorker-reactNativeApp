@@ -4,7 +4,7 @@ import React from 'react'
 import Slider from './Slider'
 import IconComponent from './IconComponent'
 
-const Header = ({navigation}) => {
+const Header = () => {
   return (
     <View>
     <IconComponent></IconComponent>

@@ -5,6 +5,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Footer from '../component/common/footer/Footer';
 import { useNavigation } from '@react-navigation/native';
 const {width, height} = Dimensions.get("window")
+
+
 const CategoryScreen = () => {
   const navigation = useNavigation()
   const [category, setCategory] = useState(null);

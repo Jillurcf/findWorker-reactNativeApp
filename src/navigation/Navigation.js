@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import CleanHome from '../page/CleanHome';
 import Main from '../page/Main';
 import CategoryScreen from '../page/CategoryScreen';
+import SearchScreen from '../page/User/SearchScreen';
 
 const Stack = createNativeStackNavigator();
 export default function Navigation() {
@@ -17,6 +18,7 @@ export default function Navigation() {
     }}>  
       <Stack.Screen name="Main" component={Main} options={{headerShown: false}} />
       <Stack.Screen name="CategoryScreen" component={CategoryScreen} options={{headerShown: false}} />
+      <Stack.Screen name="searchScreen" component={SearchScreen} options={{headerShown: false}} />
     </Stack.Navigator>
   </NavigationContainer>
   )
