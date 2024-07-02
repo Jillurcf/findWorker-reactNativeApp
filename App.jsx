@@ -12,17 +12,16 @@ import ResetPasssword from './src/page/User/ResetPasssword';
 import SearchScreen from './src/page/User/SearchScreen';
 import Categories from './src/component/Categories';
 import CategoryScreen from './src/page/CategoryScreen';
-
-
-
-
+import SettingsModal from './src/component/common/modal/SettingsModal';
+import { NativeBaseProvider, Text, Box } from "native-base";
 
 
 
 
 const App = () => {
   return (
-  <Navigation />
+   <Navigation />
+
 
   )
 }

@@ -19,12 +19,12 @@ const {width, height} = Dimensions.get('window');
 
 const SearchScreen = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  console.log("22", searchQuery);
+
   const [filteredCategories, setFilteredCategories] = useState(
     categories || [],
   );
-  console.log('23', filteredCategories);
-  const navigation = useNavigation()
+  const searchScreenCategories = filteredCategories.slice(0, 4)
+  const navigation = useNavigation();
 
   useEffect(() => {
     if (!categories) {
@@ -46,6 +46,9 @@ const SearchScreen = () => {
       navigation.navigate(filteredCategories[0]?.screenName)
     }
   }
+  const handleCategory = (category) => {
+navigation.navigate(category.screenName)
+  }
   return (
     <View style={styles.container}>
       {/* <SearchBar
@@ -60,11 +63,27 @@ const SearchScreen = () => {
         onChangeText={handleSearch}
       />
 
-      {filteredCategories.map(category => (
-        <View key={category.id} style={styles.categoryContainer}>
-          <Text style={styles.categoryName}>{category.title}</Text>
-        </View>
-      ))}
+<ScrollView
+     showsVerticalScrollIndicator={false}
+     contentContainerStyle= {
+      {paddingLeft: 0}
+     }
+     >
+      <Text style={styles.titleText}>Top Featured Services</Text>
+     <View style={styles.grid} >
+     {
+        searchScreenCategories.map((category, index) => {
+          return (
+            <View style={styles.gridItem} key={index}>
+              <TouchableOpacity onPress={() => handleCategory(category)} >
+                <Image  source={category.icon} width={100} height={100} />
+              </TouchableOpacity>
+            </View>
+          )
+        })
+      }
+     </View>
+     </ScrollView>
       <Footer />
     </View>
   );
@@ -73,7 +92,7 @@ const SearchScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
+    padding: 0,
     backgroundColor: '#fff',
   },
   searchBar: {
@@ -92,6 +111,30 @@ const styles = StyleSheet.create({
   categoryName: {
     fontSize: 18,
   },
+  scrollView: {
+    paddingHorizontal: width * 0.05,
+  },
+  grid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    paddingVertical: height * 0.05,
+    marginTop: height * -0.10,
+    
+    
+  },
+  gridItem: {
+    width: width * 0.3,
+    height: height * 0.09,
+    paddingVertical: height * 0.075,
+    alignItems: "center",
+  },
+  titleText: {
+    marginTop: height * 0.05,
+    paddingLeft: width * 0.06,
+    color: "black",
+    fontWeight: "bold"
+  }
 });
 
 export default SearchScreen;

@@ -463,6 +463,12 @@ screenName: "AirCondition"
             title: "Farmer",
             screenName: "Farmer"
         },
+        {
+            id: 66,
+            icon: require("../../assets/images/PipeFitter.png"),
+            title: "Pipe Ftter",
+            screenName: "PipeFitter"
+        },
         
         
         

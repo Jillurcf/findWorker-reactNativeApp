@@ -15,6 +15,10 @@ const Footer = () => {
     const handleCategory = () => {
         navigation.navigate("CategoryScreen")
     }
+
+    const handleSettings = () => {
+        navigation.navigate("Settings")
+    }
     return (
     <View style={styles.footerContainer}>
             <View style={styles.iconContainer}>
@@ -35,7 +39,7 @@ const Footer = () => {
 
                 </View>
                 <View style={{ alignItems: "center" }}>
-                 <TouchableOpacity >
+                 <TouchableOpacity onPress={() => handleSettings()} >
                  <UserIcon  />
                  </TouchableOpacity>
 
